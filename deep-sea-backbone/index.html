@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>The Deep-Sea Backbone</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="ent">
+      <h2>The Deep-Sea Backbone</h2>
+      <p>How AI turns undersea fiber into a self-healing nervous system</p>
+      <p style="color: var(--mu)">
+        Best with headphones. Sound starts after you tap.
+      </p>
+      <button
+        id="dive"
+        style="font-size: 20px; padding: 0 30px; min-height: 56px"
+      >
+        Tap to Dive
+      </button>
+    </div>
+    <header>
+      <h1>
+        The Deep-Sea Backbone
+        <span
+          >How AI turns undersea fiber into a self-healing nervous system</span
+        >
+      </h1>
+      <button class="tab on" data-p="sim">Simulator</button
+      ><button class="tab" data-p="cmp">Components</button
+      ><button class="tab" data-p="lrn">Learn</button>
+      <button id="snd" aria-label="Sound on or off">🔊</button
+      ><input
+        id="vol"
+        type="range"
+        min="0"
+        max="100"
+        value="60"
+        style="width: 80px"
+        aria-label="Volume"
+      /><button id="hlp">Help</button
+      ><label><input id="rm" type="checkbox" />Reduce motion</label>
+    </header>
+    <main>
+      <section class="pg on" id="sim">
+        <canvas id="cv"></canvas>
+        <div id="lbs"></div>
+        <div id="hud" class="ov gl mono">⚡ Rerouted in 0.8 ms</div>
+        <div id="ctl" class="ov gl">
+          <b>Controls</b
+          ><label>Traffic Load <span id="lt" class="mono">50%</span></label
+          ><input id="ld" type="range" min="0" max="100" value="50" />
+          <div class="chs" id="fl">
+            <button class="on" data-g="">All Cables</button
+            ><button data-g="p">Trans-Pacific</button
+            ><button data-g="a">Trans-Atlantic</button
+            ><button data-g="e">Asia-Europe</button>
+          </div>
+          <div class="chs">
+            <button id="ai">Show AI Edge</button
+            ><button id="qk">Simulate Seismic Event</button>
+          </div>
+          <div class="chs" id="th">
+            <button class="on">Ocean</button><button>Aurora</button
+            ><button>Orchid</button>
+          </div>
+          <span style="color: var(--mu); font-size: 12px"
+            >Drag to orbit. Scroll or pinch to zoom. Tap a city for readings.
+            Hover or tap a cable for its status.</span
+          >
+        </div>
+        <div id="cap" class="ov gl"></div>
+        <div id="tel" class="ov gl">
+          <button id="tx" style="float: right">✕</button>
+          <h3 id="tn"></h3>
+          <canvas id="gr" width="270" height="150" style="width: 100%"></canvas
+          ><span style="color: var(--mu); font-size: 12px"
+            >Simulated readings. SOP (State of Polarization) is the direction
+            the light's wave wobbles. SNR (Signal-to-Noise Ratio) is how clear
+            the signal is against background noise.</span
+          >
+        </div>
+      </section>
+      <section class="pg" id="cmp">
+        <h2>Component Explorer</h2>
+        <p style="color: var(--mu)">
+          Light travels in the fiber, the transponder reads it, AI interprets
+          it, and the controller reroutes traffic. Tap a part to learn more.
+        </p>
+        <div class="chs" id="cf"></div>
+        <div class="chs">
+          <button id="lvl">Detail: Beginner</button
+          ><button id="cpb">Compare</button>
+        </div>
+        <label>Layer <b id="ly" class="mono"></b></label
+        ><input id="lay" type="range" min="1" max="4" value="1" />
+        <div class="grid" id="cg"></div>
+        <div id="cd" class="gl"></div>
+        <div id="cm" class="gl"></div>
+      </section>
+      <section class="pg" id="lrn">
+        <h2>Learn Track</h2>
+        <div class="gl">
+          <b>Timeline:</b> Reactive Era ↔ AI Era<input
+            id="tls"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+          />
+          <p id="tlt"></p>
+        </div>
+        <div class="grid" id="lg"></div>
+        <div id="lw" class="gl"></div>
+        <h3>Key Terms</h3>
+        <div class="chs" id="gf"></div>
+        <div id="gc"></div>
+        <h3>Quiz</h3>
+        <div id="qz" class="gl"></div>
+      </section>
+    </main>
+    <div id="pb" title="Learning progress: lessons finished"><i></i></div>
+    <div id="tip" class="gl mono"></div>
+    <div id="hp" class="gl"></div>
+    <script src="three.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/learn.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
